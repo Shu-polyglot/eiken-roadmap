@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="founder.css" />
     <link rel="stylesheet" href="founder-profile.css" />
     <link rel="stylesheet" href="founder-photo.css" />
+    <link rel="stylesheet" href="form.css" />
   </head>
   <body>
     <header class="site-header">
@@ -117,7 +118,11 @@
 
       <section class="contact section" id="contact">
         <div class="contact-copy"><p class="eyebrow">FREE CONSULTATION</p><h2>まずは、今の悩みを<br />聞かせてください。</h2><p>無料相談では、目標級までの道のりと、今から優先すべき学習を一緒に整理します。</p><p class="note">対象：英検®2級・準1級を目指す高校生</p></div>
-        <form id="consultation-form">
+        <form id="consultation-form" action="https://formsubmit.co/gangbuzhou@icloud.com" method="POST">
+          <input type="hidden" name="_subject" value="【英検ロードマップ】無料相談のお申し込み" />
+          <input type="hidden" name="_next" value="https://shu-polyglot.github.io/eiken-roadmap/#contact" />
+          <input type="hidden" name="_template" value="table" />
+          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" />
           <label>お名前<input required name="name" autocomplete="name" placeholder="例：山田 花子" /></label>
           <label>メールアドレス<input required type="email" name="email" autocomplete="email" placeholder="example@email.com" /></label>
           <label>現在の状況<select name="level"><option>英検®準2級を取得済み</option><option>英検®2級を目指している</option><option>英検®2級を取得済み</option><option>英検®準1級を目指している</option><option>その他・相談したい</option></select></label>
