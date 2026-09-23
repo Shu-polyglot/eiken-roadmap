@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="高校生専門。英検®2級・準1級に向けた、週1回の個別コーチングと毎日の学習サポート。"
+    />
+    <title>英検ロードマップ｜高校生専門 英検®2級・準1級コーチング</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="editorial.css" />
+    <link rel="stylesheet" href="distinction-inspired.css" />
+    <link rel="stylesheet" href="monochrome.css" />
+    <link rel="stylesheet" href="founder.css" />
+    <link rel="stylesheet" href="founder-profile.css" />
+    <link rel="stylesheet" href="founder-photo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="英検ロードマップ ホーム">
+        <span class="logo-mark">E</span><span>英検ロードマップ</span>
+      </a>
+      <nav aria-label="メインメニュー">
+        <a href="#features">選ばれる理由</a>
+        <a href="#plans">料金プラン</a>
+        <a href="#flow">受講の流れ</a>
+      </nav>
+      <a class="button button-small" href="#contact">無料相談を予約する</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">HIGH SCHOOL EIKEN<sup>®</sup> COACHING / 01</p>
+          <div class="hero-pill">2026年度 冬受験の相談受付中</div>
+          <h1>英語が、<br /><em>わたしの味方になる。</em></h1>
+          <p class="hero-text">英検<sup>®</sup>2級・準1級に挑む高校生のための、個別コーチング。<br />週1回の対話と、日々の確かな一歩で、合格を現実にします。</p>
+          <div class="hero-actions"><a class="button" href="#contact">無料で相談する <span>↗</span></a><a class="text-link" href="#roadmap-demo">学習プランを見る <span>↓</span></a></div>
+          <div class="hero-stats"><p><b>2級 / 準1級</b><span>高校生専門</span></p><p><b>週1回から</b><span>個別コーチング</span></p><p><b>毎日</b><span>学習サポート</span></p></div>
+        </div>
+        <div class="hero-visual reveal delay">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div><div class="visual-dot dot-one"></div><div class="visual-dot dot-two"></div>
+          <div class="roadmap-card" aria-label="学習ロードマップのイメージ">
+            <div class="card-top"><span>MY STUDY NOTE</span><span class="live">WEEK 03</span></div>
+            <div class="student-row"><span class="avatar">H</span><div><strong>英検<sup>®</sup>2級 合格プラン</strong><small>高2 · 部活動あり · 1月受験</small></div><span class="arrow-badge">↗</span></div>
+            <div class="progress-wrap"><div class="progress-label"><span>GOAL PROGRESS</span><strong>62%</strong></div><div class="progress"><i></i></div></div>
+            <div class="week-grid"><div class="active-week"><b>NOW</b><span>語彙・長文</span></div><div><b>NEXT</b><span>英作文</span></div><div><b>DEC.</b><span>模試・面接</span></div></div>
+            <div class="coach-message"><span>COACH'S NOTE</span><p>定期テスト前は、単語15分だけでOK。計画は来週に調整します。</p></div>
+          </div>
+          <div class="floating-chip chip-one">TODAY / 25 MIN</div><div class="floating-chip chip-two">one step at a time</div>
+        </div>
+      </section>
+
+      <section class="roadmap-demo section" id="roadmap-demo">
+        <div class="demo-intro"><p class="eyebrow">MAKE IT YOURS / 03</p><h2>あなたの毎日に、<br />合う学び方を。</h2><p>目標級と今の状況を選ぶと、1週間の学習プランが変わります。</p></div>
+        <div class="demo-console">
+          <div class="console-controls"><p>01 / TARGET LEVEL</p><div class="choice-row" data-choice="level"><button class="choice active" data-value="英検®2級">英検®2級</button><button class="choice" data-value="英検®準1級">英検®準1級</button></div><p>02 / YOUR SCHEDULE</p><div class="choice-row" data-choice="schedule"><button class="choice active" data-value="部活と両立">部活と両立</button><button class="choice" data-value="短期集中">短期集中</button></div><button class="generate" id="generate-roadmap">ロードマップを更新 <span>→</span></button></div>
+          <div class="console-output"><div class="output-head"><span>YOUR NEXT 7 DAYS</span><span id="output-status">READY</span></div><h3 id="output-title">英検®2級へ向けた、今週の学習プラン</h3><div class="task-list" id="task-list"><div><span>MON</span><p>語彙 30語 + リスニング 15分</p><b>25 min</b></div><div><span>WED</span><p>長文 1題 + 間違い直し</p><b>35 min</b></div><div><span>SAT</span><p>ライティング 1題</p><b>30 min</b></div></div><p class="output-note" id="output-note">忙しい週でも「ゼロにしない」設計から始めます。</p></div>
+        </div>
+      </section>
+
+      <section class="problem section section-narrow">
+        <p class="eyebrow">FOR STUDENTS &amp; PARENTS</p>
+        <h2>こんな悩みはありませんか？</h2>
+        <div class="problem-list">
+          <p>何から始めればいいか分からない</p><p>部活や学校が忙しく、計画どおりに進まない</p><p>英作文・要約や二次面接に不安がある</p><p>子どもが自分で勉強を続けられるか心配</p>
+        </div>
+        <p class="solution">英検ロードマップは、問題をただ解かせる場所ではありません。<br /><strong>「今日、何をすれば合格に近づくか」が分かり、実行できる状態</strong>をつくるコーチングです。</p>
+      </section>
+
+      <section class="founder section" id="founder">
+        <div class="founder-label"><p class="eyebrow">FOUNDER'S LETTER / 02</p><p class="founder-name">Shu<br /><span>Founder &amp; Coach</span></p><p class="founder-profile">青山学院大学<br />文学部 英米文学科 在籍中<br /><br />英検<sup>®</sup>1級</p><figure class="founder-photo"><img src="shu-founder.jpeg" alt="Founder Shu" /><figcaption>SHU / FOUNDER &amp; COACH</figcaption></figure></div>
+        <div class="founder-story">
+          <p class="story-kicker">「海外経験がなくても、<br />英語は自分の力にできる。」</p>
+          <h2>その不安を、<br />ひとりにしないために。</h2>
+          <div class="story-body">
+            <p>青山学院大学 文学部 英米文学科に在籍する僕自身、大学に入ってから、海外経験なしで英検<sup>®</sup>1級を独学で取得しました。最初から特別な環境や、近道があったわけではありません。</p>
+            <p>必要だったのは、今の自分に必要なことを見極め、毎日の学習を続けるための道筋でした。だからこそ、頑張り方が分からず立ち止まる高校生に、その道筋を渡したいと考えています。</p>
+            <p>だから僕は、週に一度、あなたの話を聞きます。できなかったことを責めるためではなく、次の一歩を一緒に見つけるために。</p>
+          </div>
+          <p class="signature">— Shu</p>
+        </div>
+      </section>
+
+      <section class="features section" id="features">
+        <div class="section-heading"><p class="eyebrow">WHY ROADMAP</p><h2>合格まで続けられる、<br />3つの仕組み。</h2></div>
+        <div class="feature-grid">
+          <article><span class="feature-no">01</span><h3>初回に、あなた専用の<br />合格ロードマップをつくる。</h3><p>現在の力、目標級、試験日、部活や学校行事まで確認。無理のない週ごとの計画に落とし込みます。</p></article>
+          <article><span class="feature-no">02</span><h3>週1回、担当コーチが<br />学習の質を整える。</h3><p>進捗確認だけでなく、苦手の原因、勉強法、優先順位を一緒に整理。計画倒れを防ぎます。</p></article>
+          <article><span class="feature-no">03</span><h3>毎日の小さな前進を、<br />見逃さない。</h3><p>日々の課題、進捗確認、質問対応、英作文のフィードバックまで。忙しい日も学習を止めません。</p></article>
+        </div>
+      </section>
+
+      <section class="support section">
+        <div><p class="eyebrow">WHAT YOU RECEIVE</p><h2>指導時間以外にも、<br />合格への道筋を。</h2><p>担当コーチが目標と学習方針に向き合い、日々の学習サポートで実行を後押しします。</p></div>
+        <ul class="check-list"><li>初回60分面談・合格ロードマップ</li><li>週ごとの学習計画と進捗確認</li><li>日々の質問対応・学習リマインド</li><li>英作文・要約のフィードバック</li><li>保護者向け週次レポート</li><li>試験直前の計画見直し</li></ul>
+      </section>
+
+      <section class="plans section" id="plans">
+        <div class="section-heading centered"><p class="eyebrow">PLANS</p><h2>必要な伴走の深さを、<br />選べます。</h2><p>すべてのプランに、毎日の学習サポートと合格ロードマップが含まれます。</p></div>
+        <div class="plan-grid">
+          <article class="plan"><p class="plan-name">LIGHT</p><h3>週1・25分</h3><p class="price"><span>月額</span>14,980<small>円（税込）</small></p><p class="plan-text">自走力を育てながら、学習を習慣にしたい方へ。</p><a href="#contact" class="plan-link">無料相談で相談する →</a></article>
+          <article class="plan featured"><span class="recommended">おすすめ</span><p class="plan-name">STANDARD</p><h3>週1・50分</h3><p class="price"><span>月額</span>19,800<small>円（税込）</small></p><p class="plan-text">苦手技能を深く扱い、2級・準1級合格を目指す方へ。</p><a href="#contact" class="plan-link">無料相談で相談する →</a></article>
+          <article class="plan"><p class="plan-name">INTENSIVE</p><h3>週2回</h3><p class="price"><span>月額</span>26,215<small>円〜（税込）</small></p><p class="plan-text">試験まで3か月以内、または短期集中で挑戦したい方へ。</p><a href="#contact" class="plan-link">無料相談で相談する →</a></article>
+        </div>
+        <p class="plans-note">週2回プラン：各25分 26,215円／各50分 34,650円（税込）</p>
+      </section>
+
+      <section class="flow section" id="flow">
+        <div class="section-heading"><p class="eyebrow">STARTING FLOW</p><h2>はじめる前に、<br />今の状況を整理します。</h2></div>
+        <ol><li><span>01</span><div><h3>無料相談</h3><p>目標級、受験時期、英語の悩み、学校生活の予定を伺います。</p></div></li><li><span>02</span><div><h3>ロードマップ作成</h3><p>現状と試験日から逆算し、あなた専用の学習プランをご提案します。</p></div></li><li><span>03</span><div><h3>コーチング開始</h3><p>週1回の個別指導と毎日のサポートで、合格まで伴走します。</p></div></li></ol>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-copy"><p class="eyebrow">FREE CONSULTATION</p><h2>まずは、今の悩みを<br />聞かせてください。</h2><p>無料相談では、目標級までの道のりと、今から優先すべき学習を一緒に整理します。</p><p class="note">対象：英検®2級・準1級を目指す高校生</p></div>
+        <form id="consultation-form">
+          <label>お名前<input required name="name" autocomplete="name" placeholder="例：山田 花子" /></label>
+          <label>メールアドレス<input required type="email" name="email" autocomplete="email" placeholder="example@email.com" /></label>
+          <label>現在の状況<select name="level"><option>英検®準2級を取得済み</option><option>英検®2級を目指している</option><option>英検®2級を取得済み</option><option>英検®準1級を目指している</option><option>その他・相談したい</option></select></label>
+          <label>相談したいこと<textarea name="message" rows="3" placeholder="目標級や困っていることをご記入ください"></textarea></label>
+          <button class="button" type="submit">無料相談を申し込む <span>→</span></button>
+          <p class="form-note">送信後、2営業日以内にご連絡します。</p>
+          <p class="form-success" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer><a class="logo" href="#top"><span class="logo-mark">E</span><span>英検ロードマップ</span></a><p>© 2026 EIKEN ROADMAP. All rights reserved.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
