@@ -1,5 +1,3 @@
-const form = document.querySelector('#consultation-form');
-const success = document.querySelector('.form-success');
 const choices = document.querySelectorAll('.choice');
 const generateButton = document.querySelector('#generate-roadmap');
 const outputTitle = document.querySelector('#output-title');
@@ -7,13 +5,6 @@ const outputNote = document.querySelector('#output-note');
 const outputStatus = document.querySelector('#output-status');
 const taskList = document.querySelector('#task-list');
 const selections = { level: '英検®2級', schedule: '部活と両立' };
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  success.textContent = 'お問い合わせを受け付けました。確認後、2営業日以内にご連絡します。';
-  success.style.display = 'block';
-  form.reset();
-});
 
 choices.forEach((choice) => {
   choice.addEventListener('click', () => {
