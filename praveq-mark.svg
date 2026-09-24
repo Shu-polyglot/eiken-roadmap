@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">PRAVEQ monogram</title>
+  <desc id="desc">A geometric P monogram in black and white.</desc>
+  <rect width="96" height="96" fill="#111111"/>
+  <path fill="#ffffff" d="M24 20h27.1C66.8 20 76 29.1 76 43.4S66.8 66.7 51.1 66.7H40.2V76H24V20Zm16.2 14.1v18.5h10.2c6.3 0 9.6-3.1 9.6-9.2s-3.3-9.3-9.6-9.3H40.2Z"/>
+  <path fill="#ffffff" d="M69 69h7v7h-7z"/>
+</svg>
