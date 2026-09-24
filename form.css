@@ -1,1 +1,2 @@
 .honeypot{display:none!important}
+.contact-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:32px}.contact-actions .button{width:100%;margin:0}.contact .button-outline{background:transparent;color:#111}.contact .button-outline:hover{background:#fff;color:#111}@media(max-width:760px){.contact-actions{grid-template-columns:1fr;margin-top:26px}}
