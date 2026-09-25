@@ -16,3 +16,5 @@ main{perspective:1800px;overflow:hidden}.page-turn{transform-origin:50% 0;transf
 .single-plan{grid-template-columns:minmax(0,520px);justify-content:center}.single-plan .plan{min-height:330px}.single-plan .price{font-size:40px}
 
 .plan-benefits{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:18px 0;background:#595959;border:1px solid #595959}.plan-benefits p{margin:0;padding:12px 13px;background:#111;display:flex;justify-content:space-between;align-items:baseline;font-size:11px;line-height:1.5}.plan-benefits p:last-child{grid-column:1/-1}.plan-benefits b{font-weight:600;color:#d7d7d2}.plan-benefits span{font:500 16px "DM Mono",monospace;color:#fff}
+
+.plan-term{margin:-2px 0 0;color:#d7d7d2;font-size:12px}.plan-term strong{margin-left:8px;color:#fff;font:500 15px "DM Mono",monospace}
