@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Students at a classroom door</title>
+  <desc id="desc">One student carries a box of books while another student holds a classroom door open.</desc>
+  <rect width="720" height="420" fill="#f7f7f5"/>
+  <rect x="435" y="42" width="190" height="300" fill="#fff" stroke="#111" stroke-width="7"/>
+  <path d="M435 42h152v300H435z" fill="#e7e7e2" stroke="#111" stroke-width="7"/>
+  <circle cx="565" cy="197" r="8" fill="#111"/>
+  <path d="M70 356h580" stroke="#111" stroke-width="7"/>
+  <circle cx="258" cy="105" r="37" fill="#fff" stroke="#111" stroke-width="7"/>
+  <path d="M223 91q35-45 70 0" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M258 142v116M258 177l-55 56M258 177l49 38M258 258l-44 89M258 258l45 89" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="150" y="190" width="132" height="83" fill="#fff" stroke="#111" stroke-width="7"/>
+  <path d="M150 216h132M185 190v83M240 190v83" stroke="#111" stroke-width="4"/>
+  <path d="M169 206h26M204 206h26M239 206h26" stroke="#111" stroke-width="5"/>
+  <circle cx="403" cy="111" r="37" fill="#fff" stroke="#111" stroke-width="7"/>
+  <path d="M368 98q35-45 70 0" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <path d="M403 148v112M403 179l-48 18M403 179l67 28M403 260l-36 87M403 260l38 87" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 207l-21-3" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <text x="55" y="48" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#111">Picture for Question No. 2</text>
+</svg>
