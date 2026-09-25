@@ -20,3 +20,6 @@ main{perspective:1800px;overflow:hidden}.page-turn{transform-origin:50% 0;transf
 .plan-term{margin:-2px 0 0;color:#d7d7d2;font-size:12px}.plan-term strong{margin-left:8px;color:#fff;font:500 15px "DM Mono",monospace}
 \n.plan-extra{margin:0 0 18px;color:#d7d7d2;font-size:12px;line-height:1.75}\n
 .duration-plans{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.duration-plans .plan{min-height:360px}.duration-plans .plan h3{line-height:1.35}.duration-plans .plan .price{font-size:30px}.duration-plans .plan-term{min-height:39px}.plans-included{max-width:1124px;margin:20px auto 0;padding:0 28px}.plans-included p{display:flex;gap:18px;margin:0;padding:16px 18px;border:1px solid #111;background:#f7f7f5;font-size:12px;line-height:1.7}.plans-included b{white-space:nowrap}@media(max-width:900px){.duration-plans{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.duration-plans{grid-template-columns:1fr}.duration-plans .plan{min-height:0}.plans-included{padding:0 20px}.plans-included p{display:block}.plans-included b,.plans-included span{display:block}.plans-included span{margin-top:6px}}
+
+/* Keep pricing readable on the light-duration cards. */
+.duration-plans .plan:not(.featured) .price{color:#111}.duration-plans .plan:not(.featured) .plan-term{color:#4c4c49}.duration-plans .plan:not(.featured) .plan-term strong{color:#111}
