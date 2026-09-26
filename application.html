@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="PRAVEQ 英検メンターのお申し込み手続き。保護者同意、契約確認、銀行振込のご案内。">
+  <meta name="description" content="PRAVEQ 英検メンターのお申し込み手続き。保護者同意、受講日時、契約内容、Square請求のご案内。">
   <title>お申し込み｜PRAVEQ 英検メンター</title>
   <style>
     :root{--ink:#111;--paper:#f5f5f2;--soft:#e9e9e4;--line:#c9c9c2;--muted:#65655f;--ok:#174d2a}
@@ -27,14 +27,14 @@
       <h1>お申し込み<br>手続き。</h1>
       <p>無料相談・体験コーチング後に、受講を希望される方向けの申込フォームです。未成年の方は、保護者の方と一緒にご入力ください。</p>
     </section>
-    <div class="steps"><div class="step"><b>01 / INFORMATION</b>生徒・保護者情報</div><div class="step"><b>02 / AGREEMENT</b>契約内容・保護者同意</div><div class="step"><b>03 / PAYMENT</b>銀行振込のご案内</div></div>
-    <div class="notice"><strong>決済手数料0円の銀行振込を採用します。</strong><br>申込内容を確認後、振込先と支払期限を保護者メールアドレスへ個別にご案内します。口座情報は公開ページには掲載しません。振込手数料はご負担ください。</div>
+    <div class="steps"><div class="step"><b>01 / INFORMATION</b>生徒・保護者情報</div><div class="step"><b>02 / SCHEDULE</b>固定曜日・時間の希望</div><div class="step"><b>03 / AGREEMENT</b>契約内容・保護者同意</div></div>
+    <div class="notice"><strong>申込送信だけでは契約・決済は発生しません。</strong><br>無料50分体験後、申込内容と空き枠を確認し、契約書面とSquare請求書を保護者メールアドレスへ個別にお送りします。</div>
 
     <form action="https://formsubmit.co/praveq.mentor@gmail.com" method="POST" id="application-form">
       <input type="hidden" name="_subject" value="【PRAVEQ】受講申込・保護者同意">
       <input type="hidden" name="_next" value="https://shu-polyglot.github.io/eiken-roadmap/application.html?submitted=1">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="payment_method" value="銀行振込">
+      <input type="hidden" name="payment_method" value="Square請求書（カード・デビット・Apple Pay・Google Pay）">
       <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
 
       <fieldset><legend>01　生徒情報</legend>
@@ -59,13 +59,29 @@
         </div>
       </fieldset>
 
-      <fieldset><legend>03　契約内容の確認</legend>
+      <fieldset><legend>03　固定受講枠の希望</legend>
+        <p class="fine">1回50分、月4回、3か月で全12回です。契約期間中は曜日と開始時刻を原則固定します。空き状況を確認して契約時に確定します。</p>
+        <div class="grid">
+          <label class="field">第1希望の曜日<select name="schedule_day_1" required><option value="">選択してください</option><option>水曜日</option><option>木曜日</option><option>土曜日</option></select></label>
+          <label class="field">第1希望の開始時刻<input name="schedule_time_1" type="time" required></label>
+          <label class="field">第2希望の曜日<select name="schedule_day_2" required><option value="">選択してください</option><option>水曜日</option><option>木曜日</option><option>土曜日</option></select></label>
+          <label class="field">第2希望の開始時刻<input name="schedule_time_2" type="time" required></label>
+          <label class="field">第3希望の曜日<select name="schedule_day_3"><option value="">希望なし</option><option>水曜日</option><option>木曜日</option><option>土曜日</option></select></label>
+          <label class="field">第3希望の開始時刻<input name="schedule_time_3" type="time"></label>
+          <label class="field full">受講時間に関する補足 <small>部活動、学校行事、帰宅時間など。任意。</small><textarea name="schedule_notes"></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset><legend>04　契約内容の確認</legend>
         <div class="summary">
           <p><span>プログラム</span><strong>STANDARD PROGRAM</strong></p>
-          <p><span>契約期間</span><strong>3か月・全12回</strong></p>
+          <p><span>契約期間</span><strong>3か月・月4回・全12回</strong></p>
+          <p><span>受講枠</span><strong>水・木・土の固定曜日／固定時刻</strong></p>
           <p><span>料金</span><strong>月額49,800円（税込）× 3回</strong></p>
           <p><span>入会金・システム費</span><strong>0円</strong></p>
-          <p><span>支払方法</span><strong>銀行振込</strong></p>
+          <p><span>支払方法</span><strong>Square請求書による月ごとの前払い</strong></p>
+          <p><span>対応方法</span><strong>カード・デビット・Apple Pay・Google Pay</strong></p>
+          <p><span>支払期限</span><strong>初月は書面受領翌日から3日以内／以後は前月25日</strong></p>
         </div>
         <label class="choice"><input type="checkbox" name="terms_agreed" value="同意済み" required><span><a href="terms.html" target="_blank">利用規約</a>、契約前概要、キャンセル・中途解約条件を確認し、内容に同意します。</span></label>
         <label class="choice"><input type="checkbox" name="privacy_agreed" value="同意済み" required><span><a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意し、サービス提供に必要な範囲で個人情報を取り扱うことを了承します。</span></label>
@@ -73,13 +89,13 @@
         <label class="field" style="margin-top:16px">保護者署名（氏名を再入力）<input id="guardian-signature" name="guardian_signature" required placeholder="保護者氏名を入力"></label>
       </fieldset>
 
-      <fieldset><legend>04　送信後の流れ</legend>
-        <div class="notice">1. PRAVEQが申込内容を確認<br>2. 保護者メールへ振込先・支払期限を案内<br>3. 入金確認後、契約成立と開始日をメールで確定<br>4. 初回面談とロードマップ作成へ</div>
+      <fieldset><legend>05　送信後の流れ</legend>
+        <div class="notice">1. PRAVEQが申込内容と固定枠の空きを確認<br>2. 保護者メールへ契約書面とSquare請求書を送付<br>3. 初月分を書面受領日の翌日から3日以内に決済<br>4. 入金確認後、全12回の日程をメールで確定<br>5. 正式受講と個別ロードマップを開始</div>
         <button class="submit" type="submit">同意して申し込む　→</button>
         <p class="fine">送信後、原則2営業日以内にご連絡します。申込送信だけでは決済は発生しません。入力内容に誤りがある場合は、PRAVEQから確認のご連絡を差し上げます。</p>
       </fieldset>
     </form>
-    <section id="success" class="success hidden"><strong>お申し込みを受け付けました。</strong><br>内容を確認し、保護者メールアドレスへ振込先と支払期限をご案内します。この画面を閉じてお待ちください。</section>
+    <section id="success" class="success hidden"><strong>お申し込みを受け付けました。</strong><br>内容と空き枠を確認し、保護者メールアドレスへ契約書面とSquare請求書をご案内します。この画面を閉じてお待ちください。</section>
   </main>
   <footer><span>© 2026 PRAVEQ</span><span><a href="privacy.html">プライバシーポリシー</a>　<a href="terms.html">利用規約</a></span></footer>
   <script>
