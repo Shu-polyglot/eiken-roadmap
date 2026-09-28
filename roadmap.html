@@ -15,7 +15,7 @@
     <div class="tools"><div class="tabs"><button class="tab active" data-panel="roadmap">全体</button><button class="tab" data-panel="weekly">週次</button></div><button class="save" onclick="window.print()">印刷・PDF保存</button></div>
 
     <section id="roadmap" class="panel active"><div class="card">
-      <div class="meta"><label>生徒名<input data-save="name" /></label><label>目標級<input data-save="level" /></label><label>受験日<select data-save="exam" data-date-select></select></label></div>
+      <div class="meta"><label>生徒名<input data-save="name" placeholder="例：山田 太郎" /></label><label>目標級<input data-save="level" placeholder="例：英検準1級" /></label><label>受験日<select data-save="exam" data-date-select></select></label></div>
       <h2>いま最重要の課題</h2><input data-save="roadmapPriority" placeholder="例：英作文の型を定着させる" />
       <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="roadmapNext" placeholder="例：英作文を3本提出" /></label><label>期限<select data-save="roadmapDeadline" data-date-select></select></label></div>
       <p style="font-size:13px;margin:0 0 24px"><strong>R＝Reading　L＝Listening　W＝Writing　S＝Speaking</strong></p>
@@ -23,7 +23,7 @@
     </div></section>
 
     <section id="weekly" class="panel"><div class="card">
-      <div class="meta"><label>対象週<input data-save="week" placeholder="例：10/1〜10/7" /></label><label>生徒名<input data-save="weekName" /></label><label>目標級<input data-save="weekLevel" /></label></div>
+      <div class="meta"><label>対象週<input data-save="week" placeholder="例：10/1〜10/7" /></label><label>生徒名<input data-save="weekName" placeholder="例：山田 太郎" /></label><label>目標級<input data-save="weekLevel" placeholder="例：英検準1級" /></label></div>
       <h2>いま最重要の課題</h2><input data-save="weekPriority" placeholder="例：リスニングの正答率を上げる" />
       <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="weekNext" placeholder="例：過去問リスニングを2回分実施" /></label><label>期限<select data-save="weekDeadline" data-date-select></select></label></div>
       <p style="font-size:13px;margin:0 0 18px"><strong>R＝Reading　L＝Listening　W＝Writing　S＝Speaking</strong></p>
@@ -36,9 +36,9 @@
     const populateDates=()=>document.querySelectorAll('[data-date-select]').forEach(select=>{const today=new Date();select.innerHTML='<option value="">日付を選ぶ</option>';for(let i=0;i<731;i++){const d=new Date(today);d.setDate(today.getDate()+i);const value=`${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}`;const weekday='日月火水木金土'[d.getDay()];select.insertAdjacentHTML('beforeend',`<option value="${value}">${value}（${weekday}）</option>`);}});
     const bind=()=>document.querySelectorAll('[data-save]').forEach(el=>{el.value=data[el.dataset.save]||'';el.oninput=()=>{data[el.dataset.save]=el.value;save()}});
     const skills=['R｜Reading','L｜Listening','W｜Writing','S｜Speaking'];
-    document.querySelector('#months').innerHTML=Array.from({length:12},(_,i)=>i+1).map(week=>`<h2>第${week}週</h2><table><thead><tr><th>技能</th><th>取り組むこと</th><th>到達目標</th></tr></thead><tbody>${skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="w${week}-${skill[0]}-plan" /></td><td><input data-save="w${week}-${skill[0]}-goal" /></td></tr>`).join('')}</tbody></table>`).join('');
-    document.querySelector('#weeklyRows').innerHTML=skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="week-${skill[0]}-plan" /></td><td><input data-save="week-${skill[0]}-result" /></td></tr>`).join('');
-    document.querySelector('#nextRows').innerHTML=skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="next-${skill[0]}-plan" /></td></tr>`).join('');
+    document.querySelector('#months').innerHTML=Array.from({length:12},(_,i)=>i+1).map(week=>`<h2>第${week}週</h2><table><thead><tr><th>技能</th><th>取り組むこと</th><th>到達目標</th></tr></thead><tbody>${skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="w${week}-${skill[0]}-plan" placeholder="例：今週やること" /></td><td><input data-save="w${week}-${skill[0]}-goal" placeholder="例：到達ライン" /></td></tr>`).join('')}</tbody></table>`).join('');
+    document.querySelector('#weeklyRows').innerHTML=skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="week-${skill[0]}-plan" placeholder="例：今週やること" /></td><td><input data-save="week-${skill[0]}-result" placeholder="例：できたこと・課題" /></td></tr>`).join('');
+    document.querySelector('#nextRows').innerHTML=skills.map(skill=>`<tr><td>${skill}</td><td><input data-save="next-${skill[0]}-plan" placeholder="例：来週やること" /></td></tr>`).join('');
     populateDates();bind();document.querySelectorAll('.tab').forEach(tab=>tab.onclick=()=>{document.querySelectorAll('.tab,.panel').forEach(x=>x.classList.remove('active'));tab.classList.add('active');document.querySelector('#'+tab.dataset.panel).classList.add('active')});
   </script>
 </body>
