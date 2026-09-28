@@ -15,9 +15,9 @@
     <div class="tools"><div class="tabs"><button class="tab active" data-panel="roadmap">全体</button><button class="tab" data-panel="weekly">週次</button></div><button class="save" onclick="window.print()">印刷・PDF保存</button></div>
 
     <section id="roadmap" class="panel active"><div class="card">
-      <div class="meta"><label>生徒名<input data-save="name" /></label><label>目標級<input data-save="level" /></label><label>受験日<input data-save="exam" type="date" /></label></div>
+      <div class="meta"><label>生徒名<input data-save="name" /></label><label>目標級<input data-save="level" /></label><label>受験日<input data-save="exam" placeholder="例：12/1（日）" /></label></div>
       <h2>いま最重要の課題</h2><input data-save="roadmapPriority" placeholder="例：英作文の型を定着させる" />
-      <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="roadmapNext" placeholder="例：英作文を3本提出" /></label><label>期限<input data-save="roadmapDeadline" type="date" /></label></div>
+      <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="roadmapNext" placeholder="例：英作文を3本提出" /></label><label>期限<input data-save="roadmapDeadline" placeholder="例：10/7（月）" /></label></div>
       <p style="font-size:13px;margin:0 0 24px"><strong>R＝Reading　L＝Listening　W＝Writing　S＝Speaking</strong></p>
       <div id="months"></div>
     </div></section>
@@ -25,7 +25,7 @@
     <section id="weekly" class="panel"><div class="card">
       <div class="meta"><label>対象週<input data-save="week" placeholder="例：10/1〜10/7" /></label><label>生徒名<input data-save="weekName" /></label><label>目標級<input data-save="weekLevel" /></label></div>
       <h2>いま最重要の課題</h2><input data-save="weekPriority" placeholder="例：リスニングの正答率を上げる" />
-      <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="weekNext" placeholder="例：過去問リスニングを2回分実施" /></label><label>期限<input data-save="weekDeadline" type="date" /></label></div>
+      <div class="meta" style="margin-top:12px"><label style="grid-column:span 2">次回までの行動<input data-save="weekNext" placeholder="例：過去問リスニングを2回分実施" /></label><label>期限<input data-save="weekDeadline" placeholder="例：10/7（月）" /></label></div>
       <p style="font-size:13px;margin:0 0 18px"><strong>R＝Reading　L＝Listening　W＝Writing　S＝Speaking</strong></p>
       <h2>今週</h2><table><thead><tr><th>技能</th><th>取り組むこと</th><th>できたこと・課題</th></tr></thead><tbody id="weeklyRows"></tbody></table>
       <h2>来週</h2><table><thead><tr><th>技能</th><th>取り組むこと</th></tr></thead><tbody id="nextRows"></tbody></table>
