@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRAVEQ｜学習ロードマップ</title>
+  <style>
+    :root{--ink:#17241e;--paper:#f6f4ec;--line:#d8d7cf;--accent:#b8ff57;--muted:#67706a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif}.wrap{max-width:980px;margin:auto;padding:36px 20px 80px}.brand{font-size:12px;letter-spacing:.14em;font-weight:800}.title{font-size:clamp(28px,5vw,48px);margin:12px 0 6px}.lead{margin:0;color:var(--muted)}.tools{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:28px 0}.tabs{display:flex;gap:8px}.tab,.action{border:1px solid var(--ink);background:transparent;padding:10px 14px;font-weight:700;cursor:pointer}.tab.active{background:var(--ink);color:white}.action.primary{background:var(--accent)}.panel{display:none}.panel.active{display:block}.card{background:white;border:1px solid var(--line);padding:26px;margin-top:18px}.card h2{margin:0 0 18px;font-size:22px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.field{display:grid;gap:6px;font-size:13px;font-weight:700}.field.full{grid-column:1/-1}input,textarea{width:100%;border:1px solid var(--line);border-radius:2px;padding:10px;background:#fff;font:inherit;color:inherit;font-weight:400}textarea{min-height:82px;resize:vertical}h3{font-size:16px;margin:30px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:#f0f0ea}td input,td textarea{border:0;padding:0;min-height:28px}.note{font-size:12px;color:var(--muted);margin-top:14px}.weekly-head{display:flex;gap:14px;align-items:end}.weekly-head .field{flex:1}@media(max-width:620px){.grid,.grid.three{grid-template-columns:1fr}.tools{align-items:flex-start;gap:14px;flex-direction:column}.weekly-head{display:grid;grid-template-columns:1fr}.card{padding:18px}}@media print{body{background:white}.wrap{max-width:none;padding:0}.tools,.lead{display:none}.panel{display:none!important}.panel.active{display:block!important}.card{border:0;padding:0}.card:not(.print-card){display:none}.title{font-size:28px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">PRAVEQ MENTOR</div>
+    <h1 class="title">学習ロードマップ</h1>
+    <p class="lead">入力内容はこのブラウザに自動保存されます。</p>
+    <div class="tools">
+      <div class="tabs"><button class="tab active" data-panel="roadmap">全体ロードマップ</button><button class="tab" data-panel="weekly">週次報告書</button></div>
+      <button class="action primary" onclick="window.print()">印刷・PDF保存</button>
+    </div>
+
+    <section id="roadmap" class="panel active">
+      <div class="card print-card">
+        <h2>全体ロードマップ</h2>
+        <div class="grid three">
+          <label class="field">生徒名<input data-save="studentName" placeholder="例：山田 花子" /></label>
+          <label class="field">目標級<input data-save="targetLevel" placeholder="例：英検®準1級" /></label>
+          <label class="field">受験日<input data-save="examDate" type="date" /></label>
+          <label class="field">開始日<input data-save="startDate" type="date" /></label>
+          <label class="field">終了日<input data-save="endDate" type="date" /></label>
+          <label class="field">担当メンター<input data-save="mentor" /></label>
+          <label class="field full">現在の課題<textarea data-save="currentChallenge" placeholder="例：単語力、要約、二次試験など"></textarea></label>
+          <label class="field full">最終ゴール<textarea data-save="finalGoal"></textarea></label>
+        </div>
+        <div id="months"></div>
+        <h3>面談・見直し予定</h3>
+        <table><thead><tr><th>時期</th><th>確認すること</th><th>調整内容</th></tr></thead><tbody>
+          <tr><td>開始時</td><td><input data-save="reviewStartCheck" /></td><td><input data-save="reviewStartAdjust" /></td></tr>
+          <tr><td>1か月後</td><td><input data-save="review1Check" /></td><td><input data-save="review1Adjust" /></td></tr>
+          <tr><td>2か月後</td><td><input data-save="review2Check" /></td><td><input data-save="review2Adjust" /></td></tr>
+          <tr><td>直前期</td><td><input data-save="reviewFinalCheck" /></td><td><input data-save="reviewFinalAdjust" /></td></tr>
+        </tbody></table>
+      </div>
+    </section>
+
+    <section id="weekly" class="panel">
+      <div class="card print-card">
+        <h2>週次報告書</h2>
+        <div class="weekly-head"><label class="field">対象週<input data-save="weekRange" placeholder="例：10月1日〜10月7日" /></label><label class="field">生徒名<input data-save="weekStudent" /></label><label class="field">担当メンター<input data-save="weekMentor" /></label></div>
+        <h3>今週の目標</h3><textarea data-save="weekGoals" placeholder="1. \n2. \n3. "></textarea>
+        <h3>学習実績</h3>
+        <table><thead><tr><th>項目</th><th>予定</th><th>実績</th><th>コメント</th></tr></thead><tbody id="weeklyRows"></tbody></table>
+        <h3>今週できたこと</h3><textarea data-save="weekWins"></textarea>
+        <h3>課題・次回の改善点</h3><textarea data-save="weekIssues"></textarea>
+        <h3>次週の最優先事項</h3><textarea data-save="nextPriorities" placeholder="1. \n2. \n3. "></textarea>
+        <h3>メンターコメント</h3><textarea data-save="mentorComment"></textarea>
+        <div class="grid"><label class="field">次回面談日<input data-save="nextMeeting" type="date" /></label><label class="field">保護者共有事項<input data-save="parentNote" /></label></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const store='praveq-roadmap-v1'; const data=JSON.parse(localStorage.getItem(store)||'{}');
+    const save=()=>localStorage.setItem(store,JSON.stringify(data));
+    document.querySelectorAll('[data-save]').forEach(el=>{el.value=data[el.dataset.save]||'';el.addEventListener('input',()=>{data[el.dataset.save]=el.value;save()})});
+    const months=document.querySelector('#months');
+    ['1か月目','2か月目','3か月目'].forEach((label,i)=>{const key=`m${i+1}`;months.insertAdjacentHTML('beforeend',`<h3>${label}｜<input data-save="${key}Title" placeholder="テーマ" style="width:180px;border:0;border-bottom:1px solid var(--line);padding:3px" /></h3><label class="field">目的<textarea data-save="${key}Purpose"></textarea></label><table><thead><tr><th>重点項目</th><th>取り組む内容</th><th>到達目標</th></tr></thead><tbody>${['単語','長文','リスニング','英作文・要約','面接'].map(item=>`<tr><td>${item}</td><td><input data-save="${key}${item}Action" /></td><td><input data-save="${key}${item}Goal" /></td></tr>`).join('')}</tbody></table>`)});
+    const weeklyRows=document.querySelector('#weeklyRows');['学習時間','単語','長文','リスニング','英作文・要約','面接対策'].forEach(item=>weeklyRows.insertAdjacentHTML('beforeend',`<tr><td>${item}</td><td><input data-save="${item}Plan" /></td><td><input data-save="${item}Actual" /></td><td><input data-save="${item}Comment" /></td></tr>`));
+    document.querySelectorAll('[data-save]').forEach(el=>{el.value=data[el.dataset.save]||'';el.addEventListener('input',()=>{data[el.dataset.save]=el.value;save()})});
+    document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab,.panel').forEach(x=>x.classList.remove('active'));tab.classList.add('active');document.querySelector('#'+tab.dataset.panel).classList.add('active')}));
+  </script>
+</body>
+</html>
